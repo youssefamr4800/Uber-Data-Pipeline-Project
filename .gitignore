@@ -1,0 +1,96 @@
+
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+test*
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment & secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Databricks
+# =========================
+
+.databricks/
+
+# Databricks local state / generated files
+.databricks/bundle/
+
+# =========================
+# IDEs / Editors
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+# =========================
+# Testing / Coverage
+# =========================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Build / Distribution
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# =========================
+# Local data
+# =========================
+
+# Ignore CSV/data files by default
+# Uncomment if you don't want to commit datasets:
+# data/*.csv
