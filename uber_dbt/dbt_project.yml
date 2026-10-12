@@ -32,5 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   uber_dbt:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    gold:
+      +materialized: table
+    silver:
+      +materialized: table
+      schema: silver
