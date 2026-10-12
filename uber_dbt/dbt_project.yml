@@ -34,6 +34,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     gold:
       +materialized: table
+      +schema: gold
     silver:
       +materialized: table
-      schema: silver
+      +schema: silver

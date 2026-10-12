@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_drivers
+    columns:
+      - name: driver_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_vehicles
+    columns:
+      - name: vehicle_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: fct_trips
+    columns:
+      - name: trip_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+
+      - name: driver_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_drivers')
+                field: driver_id
+
+      - name: vehicle_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_vehicles')
+                field: vehicle_id
+
+  - name: fct_payments
+    columns:
+      - name: payment_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: trip_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fct_trips')
+                field: trip_id
